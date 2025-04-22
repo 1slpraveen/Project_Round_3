@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0 text-center">About Our Service</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4>Secure</h4>
+                        <p class="text-muted">Bank-grade security protocols to protect your data</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-bolt fa-3x text-primary"></i>
+                        </div>
+                        <h4>Fast</h4>
+                        <p class="text-muted">Generate statements in seconds</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-file-pdf fa-3x text-primary"></i>
+                        </div>
+                        <h4>Professional</h4>
+                        <p class="text-muted">High-quality PDF statements</p>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="about-content">
+                    <h4 class="mb-3">What We Offer</h4>
+                    <p class="lead">Our Bank Statement Generator provides a seamless solution for generating professional bank statements instantly.</p>
+                    
+                    <div class="features-list mt-4">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Detailed transaction history</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Professional PDF formatting</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Instant download capability</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-info mt-5">
+                        <h4 class="mb-3">Need Help?</h4>
+                        <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> support@bankstatement.com</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i> +1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="fas fa-clock me-2 text-primary"></i> Available 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    .feature-icon {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background: rgba(0, 32, 96, 0.1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon i {
+        color: #002060;
+    }
+    
+    .features-list {
+        background: rgba(0, 32, 96, 0.05);
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .contact-info {
+        background: rgba(0, 32, 96, 0.05);
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+        color: #495057;
+    }
+    
+    hr {
+        background-color: rgba(0, 32, 96, 0.1);
+        height: 2px;
+    }
+</style>
+{% endblock %}

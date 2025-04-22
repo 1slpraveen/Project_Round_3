@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0 text-center">Bank Statement Generator</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-4">
+                        <label for="account_number" class="form-label">Account Number</label>
+                        <input type="text" class="form-control" id="account_number" name="account_number" 
+                               placeholder="Enter your account number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Generate Statement</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

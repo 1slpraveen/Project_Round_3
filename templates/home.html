@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-8 text-center text-white position-relative">
+        <div class="credit-card mb-5">
+            <div class="card-chip"></div>
+            <div class="card-logo">
+                <i class="fab fa-cc-visa"></i>
+            </div>
+            <div class="card-number">4532 •••• •••• 7685</div>
+            <div class="card-details">
+                <div class="card-holder">
+                    <span>Card Holder</span>
+                    <div>JOHN DOE</div>
+                </div>
+                <div class="card-expires">
+                    <span>Expires</span>
+                    <div>12/25</div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="display-4 mb-4">Welcome to Bank Statement Generator</h1>
+        <p class="lead mb-4">Generate your bank statements quickly and easily</p>
+        <a href="{{ url_for('generate') }}" class="btn btn-light btn-lg">Generate Statement</a>
+    </div>
+</div>
+
+<style>
+    .credit-card {
+        width: 340px;
+        height: 200px;
+        background: linear-gradient(45deg, #1a1f71, #0077be);
+        border-radius: 15px;
+        padding: 25px;
+        color: white;
+        position: relative;
+        margin: 0 auto 3rem;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        transform: perspective(1000px) rotateX(10deg);
+        transition: transform 0.3s ease;
+    }
+
+    .credit-card:hover {
+        transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+    }
+
+    .card-chip {
+        width: 45px;
+        height: 34px;
+        background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+        border-radius: 5px;
+        margin-bottom: 35px;
+        position: relative;
+    }
+
+    .card-chip::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 35px;
+        height: 24px;
+        background: linear-gradient(135deg, #b8860b 0%, #ffd700 100%);
+        border-radius: 3px;
+    }
+
+    .card-logo {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    .card-logo i {
+        font-size: 50px;
+        color: white;
+    }
+
+    .card-number {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        font-family: 'Courier New', monospace;
+    }
+
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .card-holder span, .card-expires span {
+        opacity: 0.7;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .card-holder div, .card-expires div {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    /* Add hologram effect */
+    .credit-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            125deg,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.05) 40%,
+            rgba(255,255,255,0.1) 45%,
+            rgba(255,255,255,0.05) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        border-radius: 15px;
+    }
+</style>
+{% endblock %}
