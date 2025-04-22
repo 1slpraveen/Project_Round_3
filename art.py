@@ -93,8 +93,13 @@ def generate_pdf_bank_statement(
     pdf.cell(200, 10, f"{BANK_NAME} &copy; {datetime.now().year}. All rights reserved.", 0, 1, 'C')
 
     # Output the PDF to a file
-    pdf.output(output_file)
-    print(f"✅ PDF successfully generated: {output_file}")
+    # Handle both file path and BytesIO
+    if isinstance(output_file, str):
+        pdf.output(output_file)
+        print(f"✅ PDF successfully generated: {output_file}")
+    else:
+        # For BytesIO object
+        pdf.output(output_file, 'F')
 
 # --- Main Program ---
 if __name__ == "__main__":
