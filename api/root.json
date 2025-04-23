@@ -1,0 +1,6 @@
+{
+  "handler": "app.app",
+  "runtime": "python3.9",
+  "memory": 1024,
+  "maxDuration": 10
+}

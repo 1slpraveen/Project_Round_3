@@ -4,9 +4,7 @@ from datetime import datetime
 import os
 import io
 
-app = Flask(__name__, static_folder='static')
-
-# Add this line for Vercel
+app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
@@ -42,9 +40,6 @@ def generate():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-# Add this for Vercel
-app = app.wsgi_app
 
 if __name__ == '__main__':
     app.run(debug=True)
